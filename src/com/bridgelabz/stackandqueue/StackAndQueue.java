@@ -4,14 +4,15 @@ public class StackAndQueue {
 	Node head;
 	Node tail;
 	Node top;
-	
+
 	public Node push(int data) {
 		Node newNode = new Node(data);
-		
+
 		if (head == null) {
 			head = newNode;
 			tail = newNode;
-		} else {
+		} 
+		else {
 			Node tempNode = head;
 			this.head = newNode;
 			newNode.next = tempNode;
@@ -19,7 +20,7 @@ public class StackAndQueue {
 		top=head;
 		return newNode;
 	}
-	
+
 	public int peek(){
 		System.out.println("Top element is "+this.top.data);
 		return top.data;
@@ -32,7 +33,6 @@ public class StackAndQueue {
 			this.head = tempNode.next;
 			temp=temp.next;
 		}
-
 	}
 
 	public void queue(int data) {
@@ -41,18 +41,20 @@ public class StackAndQueue {
 			head = newNode;
 			tail = newNode;
 			top=head;
-		} else {
+		} 
+		else {
 			Node tempNode=tail;
 			this.tail=newNode;
 			tempNode.next=tail;
 		}
 	}
-	
+
 	public void display(){
 		if (head == null) {
 			System.out.println("Linked list is Empty");
 			return;
-		} else {
+		} 
+		else {
 			System.out.print("\n The stack elements are ");
 			Node tempNode = head;
 			while (tempNode != null) {
